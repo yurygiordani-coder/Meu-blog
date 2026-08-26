@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +10,14 @@
 
   <header>
     <h1>TechVerse</h1>
-    <button id="theme-toggle">Alternar Tema</button>
+    <button id="theme-toggle" aria-label="Alternar tema">
+      <span id="theme-icon">🌙</span>
+      <span id="theme-text">Modo Escuro</span>
+    </button>
   </header>
 
   <main>
-    <article>
+    <article class="card">
       <h2>O Futuro da Inteligência Artificial em 2026</h2>
       <p>A tecnologia continua a evoluir em um ritmo acelerado. A integração de novos modelos visuais e processamento local transformou a forma como interagimos com nossos dispositivos...</p>
     </article>
