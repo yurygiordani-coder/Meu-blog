@@ -1,28 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechVerse Blog</title>
+  <title>TechPulse | O Futuro da Tecnologia</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>TechVerse</h1>
-    <button id="theme-toggle" aria-label="Alternar tema">
-      <span id="theme-icon">🌙</span>
-      <span id="theme-text">Modo Escuro</span>
-    </button>
+  <!-- Header & Navegação -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Tech<span>Pulse</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#artigos">Artigos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </nav>
+      <!-- Botão de Troca de Tema -->
+      <button id="theme-toggle" aria-label="Alternar Tema">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <article class="card">
-      <h2>O Futuro da Inteligência Artificial em 2026</h2>
-      <p>A tecnologia continua a evoluir em um ritmo acelerado. A integração de novos modelos visuais e processamento local transformou a forma como interagimos com nossos dispositivos...</p>
-    </article>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <span class="tag">Destaque</span>
+      <h1>O Impacto da Inteligência Artificial na Programação Moderna</h1>
+      <p>Descubra como novas ferramentas de IA estão transformando a rotina de desenvolvedores e moldando o futuro do software.</p>
+    </div>
+  </section>
+
+  <!-- Grade de Artigos -->
+  <main class="container content" id="artigos">
+    <h2>Últimas Publicações</h2>
+    <div class="posts-grid">
+      
+      <article class="post-card">
+        <span class="tag">Hardware</span>
+        <h3>Processadores Quânticos: O Próximo Salto</h3>
+        <p>Entenda como a computação quântica pretende resolver problemas supercomputacionais em questão de segundos.</p>
+        <div class="post-meta">
+          <span>24 Ago, 2026</span> • <span>5 min de leitura</span>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <span class="tag">DevOps</span>
+        <h3>O Fim da Era dos Servidores Físicos</h3>
+        <p>A arquitetura Serverless continua a dominar a nuvem. Veja as vantagens e desafios de migrar sua infraestrutura.</p>
+        <div class="post-meta">
+          <span>20 Ago, 2026</span> • <span>8 min de leitura</span>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <span class="tag">Segurança</span>
+        <h3>Criptografia Pós-Quântica na Prática</h3>
+        <p>Como as empresas de cibersegurança estão se preparando para proteger dados contra ataques de nova geração.</p>
+        <div class="post-meta">
+          <span>15 Ago, 2026</span> • <span>6 min de leitura</span>
+        </div>
+      </article>
+
+    </div>
   </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 TechPulse. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
