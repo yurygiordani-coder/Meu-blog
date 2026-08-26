@@ -3,84 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechPulse - O seu portal de notícias sobre Inteligência Artificial, Engenharia de Software e Cibersegurança.">
   <title>TechPulse | O Futuro da Tecnologia</title>
+  
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Acessibilidade: Atalho para leitores de tela -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
   <!-- Header & Navegação -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">Tech<span>Pulse</span></a>
-      <nav>
+      <a href="#" class="logo" aria-label="TechPulse Home">Tech<span>Pulse</span></a>
+      
+      <nav aria-label="Navegação Principal">
         <ul class="nav-links">
-          <li><a href="#home">Início</a></li>
           <li><a href="#artigos">Artigos</a></li>
+          <li><a href="#tendencias">Tendências</a></li>
           <li><a href="#sobre">Sobre</a></li>
         </ul>
       </nav>
-      <!-- Botão de Troca de Tema -->
-      <button id="theme-toggle" aria-label="Alternar Tema">
-        <span class="theme-icon">🌙</span>
+
+      <!-- Botão de Tema Acessível -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar para modo claro" aria-live="polite">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container hero-content">
-      <span class="tag">Destaque</span>
-      <h1>O Impacto da Inteligência Artificial na Programação Moderna</h1>
-      <p>Descubra como novas ferramentas de IA estão transformando a rotina de desenvolvedores e moldando o futuro do software.</p>
-    </div>
-  </section>
-
-  <!-- Grade de Artigos -->
-  <main class="container content" id="artigos">
-    <h2>Últimas Publicações</h2>
-    <div class="posts-grid">
-      
-      <article class="post-card">
-        <span class="tag">Hardware</span>
-        <h3>Processadores Quânticos: O Próximo Salto</h3>
-        <p>Entenda como a computação quântica pretende resolver problemas supercomputacionais em questão de segundos.</p>
-        <div class="post-meta">
-          <span>24 Ago, 2026</span> • <span>5 min de leitura</span>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">
+            <span class="badge-dot"></span> Em Destaque
+          </span>
+          <h1>O Impacto da Inteligência Artificial na Programação Moderna</h1>
+          <p>Descubra como os novos modelos fundacionais e agentes autônomos estão redefinindo a engenharia de software e a criação de produtos digitais.</p>
+          <div class="hero-actions">
+            <a href="#artigo-destaque" class="btn btn-primary">Ler Artigo Completo</a>
+            <span class="read-time">📖 7 min de leitura</span>
+          </div>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="post-card">
-        <span class="tag">DevOps</span>
-        <h3>O Fim da Era dos Servidores Físicos</h3>
-        <p>A arquitetura Serverless continua a dominar a nuvem. Veja as vantagens e desafios de migrar sua infraestrutura.</p>
-        <div class="post-meta">
-          <span>20 Ago, 2026</span> • <span>8 min de leitura</span>
-        </div>
-      </article>
+    <!-- Grade de Artigos -->
+    <section class="container content-section" id="artigos">
+      <div class="section-header">
+        <h2>Últimas Publicações</h2>
+        <p>Acompanhe nossas análises técnicas e tendências do mercado.</p>
+      </div>
 
-      <article class="post-card">
-        <span class="tag">Segurança</span>
-        <h3>Criptografia Pós-Quântica na Prática</h3>
-        <p>Como as empresas de cibersegurança estão se preparando para proteger dados contra ataques de nova geração.</p>
-        <div class="post-meta">
-          <span>15 Ago, 2026</span> • <span>6 min de leitura</span>
-        </div>
-      </article>
+      <div class="posts-grid">
+        
+        <article class="post-card">
+          <div class="post-card-body">
+            <span class="tag">Hardware</span>
+            <h3><a href="#">Processadores Quânticos e o Salto em Escala</a></h3>
+            <p>Entenda como a computação quântica está resolvendo problemas de otimização em segundos.</p>
+          </div>
+          <footer class="post-meta">
+            <time datetime="2026-08-24">24 Ago, 2026</time>
+            <span class="dot">•</span>
+            <span>5 min de leitura</span>
+          </footer>
+        </article>
 
-    </div>
+        <article class="post-card">
+          <div class="post-card-body">
+            <span class="tag">Cloud & DevOps</span>
+            <h3><a href="#">Serverless no Limite: Da Nuvem às Edge Networks</a></h3>
+            <p>A evolução da computação sem servidor e o impacto na latência global de aplicações de alta escala.</p>
+          </div>
+          <footer class="post-meta">
+            <time datetime="2026-08-20">20 Ago, 2026</time>
+            <span class="dot">•</span>
+            <span>8 min de leitura</span>
+          </footer>
+        </article>
+
+        <article class="post-card">
+          <div class="post-card-body">
+            <span class="tag">Segurança</span>
+            <h3><a href="#">Criptografia Pós-Quântica na Prática</a></h3>
+            <p>Como equipes de segurança já estão migrando chaves e algoritmos de proteção de dados.</p>
+          </div>
+          <footer class="post-meta">
+            <time datetime="2026-08-15">15 Ago, 2026</time>
+            <span class="dot">•</span>
+            <span>6 min de leitura</span>
+          </footer>
+        </article>
+
+      </div>
+    </section>
   </main>
 
   <!-- Rodapé -->
   <footer class="footer">
-    <div class="container">
+    <div class="container footer-content">
       <p>&copy; 2026 TechPulse. Todos os direitos reservados.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
